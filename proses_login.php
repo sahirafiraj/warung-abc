@@ -2,8 +2,8 @@
 session_start();
 include 'config/koneksi.php';
 
-$username = mysqli_real_escape_string($koneksi,$_POST['username']);
-$username = $_POST['password'];
+$username = mysqli_real_escape_string($koneksi, $_POST['username']);
+$password = $_POST['password'];
 
 $sql = "SELECT * FROM tbl_user WHERE username = '$username'";
 $hasil = mysqli_query($koneksi, $sql);
@@ -24,10 +24,15 @@ if (mysqli_num_rows($hasil) == 1) {
 
         header('Location: dashboard.php');
         exit;
-    }
+
     } else {
-        $_SESSION['pesan_error'] = 'Username tidak ditemukan!';
+        $_SESSION['pesan_error'] = 'Password salah!';
         header('Location: login.php');
         exit;
     }
+} else {
+    $_SESSION['pesan_error'] = 'Username tidak ditemukan!';
+    header('Location:login.php');
+    exit;
+}
 ?>
