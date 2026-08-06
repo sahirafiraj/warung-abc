@@ -1,11 +1,11 @@
 <?php
-
 include 'includes/cek_session.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Dashboard - Warung ABC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Selamat Datang, <?php echo $_SESSION['nama_lengkap']; ?></h1>
@@ -13,6 +13,7 @@ include 'includes/cek_session.php';
 
     <ul>
         <?php if($_SESSION['role'] == 'admin' || $_SESSION['role'] == 'gudang') { ?>
+        <li><a href="data_barang.php">Data Barang</a></li>
     <?php } ?>
 
     <?php if($_SESSION['role']== 'admin' || $_SESSION['role']== 'kasir') { ?>

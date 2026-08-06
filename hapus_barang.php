@@ -1,7 +1,6 @@
 <?php
-session_start()
 include 'includes/cek_session.php';
-include 'config/koneksi';
+include 'config/koneksi.php';
 
 $id = $_GET['id'];
 

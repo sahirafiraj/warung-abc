@@ -11,6 +11,7 @@ $data = mysqli_fetch_assoc($hasil);
 <html>
 <head>
     <title>Edit Barang - Warung ABC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Edit Barang</h1>

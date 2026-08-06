@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include 'includes/cek_session.php';
 include 'config/koneksi.php';
 
@@ -17,7 +17,7 @@ $barang = mysqli_fetch_assoc($hasil);
 if ($barang && $jumlah > 0 && $jumlah <= $barang['stok']) {
     $subtotal = $barang['harga_satuan'] * $jumlah;
 
-    $_SESSION['keranjang'][id_barang] = array(
+    $_SESSION['keranjang'][$id_barang] = array(
         'nama_barang' => $barang['nama_barang'],
         'harga' => $barang['harga_satuan'],
         'jumlah' => $jumlah,

@@ -9,6 +9,7 @@ $hasil = mysqli_query($koneksi, $sql);
 <html>
 <head>
     <title>Riwayat Transaksi - Warung ABC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Riwayat Transaksi</h1>
