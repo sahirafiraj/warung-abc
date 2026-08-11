@@ -11,7 +11,7 @@ if(empty($_SESSION['keranjang'])) {
 
 $id_kasir = $_SESSION['id_user'];
 $no_transaksi = 'TRX-' . date('YmdHis');
-$tanggal = date('Y-m-s H:i:s');
+$tanggal = date('Y-m-d H:i:s');
 
 $total = 0;
 foreach ($_SESSION['keranjang'] as $item) {
@@ -24,7 +24,8 @@ mysqli_query($koneksi, $sql);
 
 $id_transaksi = mysqli_insert_id($koneksi);
 
-foreach ($_SESSION['keranjang'] as $item) {
+foreach ($_SESSION['keranjang'] as $id_barang => $item) {
+
     $jumlah = $item['jumlah'];
     $subtotal = $item['subtotal'];
 
@@ -32,8 +33,9 @@ foreach ($_SESSION['keranjang'] as $item) {
     $detail .= " VALUES ('$id_transaksi', '$id_barang', '$jumlah', '$subtotal')";
     mysqli_query($koneksi, $detail);
 
-    $update_stok = "UPDATE tbl_barang SET stok = stok - $jumlah WHERE id_barang = '$id_barang'";
+    $update_stok = "UPDATE tbl_barang SET stok=stok-$jumlah WHERE id_barang='$id_barang'";
     mysqli_query($koneksi, $update_stok);
+
 }
 
 $waktu = date('Y-m-d H:i:s');
