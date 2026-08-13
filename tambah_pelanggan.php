@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Tambah Pelanggan - Warung ABC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Tambah Pelanggan</h1>

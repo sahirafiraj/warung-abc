@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+/* =========================
+   HTML
+========================= */
+
 html {
     scroll-behavior: smooth;
 }
+
+/* =========================
+   BODY
+========================= */
 
 body {
     min-height: 100vh;
@@ -33,6 +41,9 @@ body {
         );
 }
 
+/* =========================
+   JUDUL
+========================= */
 
 h1 {
     width: 100%;
@@ -76,6 +87,10 @@ h1::after {
     );
 }
 
+/* =========================
+   HEADING
+========================= */
+
 h2,
 h3 {
     font-family: 'DM Serif Display', serif;
@@ -95,6 +110,10 @@ h3 {
     font-size: 25px;
 }
 
+/* =========================
+   PARAGRAPH
+========================= */
+
 p {
     color: #766a6f;
 
@@ -102,6 +121,10 @@ p {
 
     line-height: 1.8;
 }
+
+/* =========================
+   FORM
+========================= */
 
 form {
     width: min(100%, 520px);
@@ -126,7 +149,6 @@ form {
     overflow: hidden;
 }
 
-
 form::before {
     content: "";
 
@@ -148,6 +170,10 @@ form::before {
     );
 }
 
+/* =========================
+   LABEL
+========================= */
+
 label {
     display: block;
 
@@ -159,6 +185,10 @@ label {
 
     font-weight: 500;
 }
+
+/* =========================
+   INPUT
+========================= */
 
 input,
 select,
@@ -188,12 +218,9 @@ textarea {
     transition: all 0.25s ease;
 }
 
-
-
 input::placeholder {
     color: #aaa0a4;
 }
-
 
 input:focus,
 select:focus,
@@ -205,6 +232,10 @@ textarea:focus {
     box-shadow:
         0 0 0 4px rgba(223, 150, 175, 0.12);
 }
+
+/* =========================
+   SUBMIT
+========================= */
 
 input[type="submit"] {
     display: block;
@@ -242,7 +273,6 @@ input[type="submit"] {
         all 0.25s ease;
 }
 
-
 /* Hover submit */
 
 input[type="submit"]:hover {
@@ -254,7 +284,6 @@ input[type="submit"]:hover {
         0 8px 17px rgba(190, 120, 145, 0.22);
 }
 
-
 /* Saat ditekan */
 
 input[type="submit"]:active {
@@ -263,6 +292,10 @@ input[type="submit"]:active {
     box-shadow:
         0 3px 8px rgba(190, 120, 145, 0.15);
 }
+
+/* =========================
+   BUTTON
+========================= */
 
 button {
     display: inline-flex;
@@ -308,6 +341,10 @@ button:hover {
         0 8px 17px rgba(190, 120, 145, 0.22);
 }
 
+/* =========================
+   LINK
+========================= */
+
 a {
     display: inline-flex;
 
@@ -350,6 +387,10 @@ a:hover {
     box-shadow:
         0 7px 15px rgba(100, 70, 80, 0.10);
 }
+
+/* =========================
+   LIST
+========================= */
 
 ul {
     width: min(100%, 750px);
@@ -412,6 +453,10 @@ ul li a:hover {
         );
 }
 
+/* =========================
+   BODY PARAGRAPH
+========================= */
+
 body > p {
     width: min(100%, 750px);
 
@@ -430,6 +475,10 @@ body > p {
     box-shadow:
         0 8px 20px rgba(70, 50, 60, 0.05);
 }
+
+/* =========================
+   TABLE
+========================= */
 
 table {
     width: 100%;
@@ -506,6 +555,10 @@ tr:last-child td {
     font-weight: 600;
 }
 
+/* =========================
+   TABLE ACTION
+========================= */
+
 td a {
     min-width: 75px;
 
@@ -534,6 +587,10 @@ td a:hover {
     border-color: #e9a3b9;
 }
 
+/* =========================
+   DASHBOARD CARD
+========================= */
+
 .dashboard-card {
     width: min(100%, 850px);
 
@@ -553,6 +610,10 @@ td a:hover {
     text-align: center;
 }
 
+/* =========================
+   SECTION TITLE
+========================= */
+
 .section-title {
     width: fit-content;
 
@@ -568,6 +629,10 @@ td a:hover {
 
     border-bottom: 2px solid #e4a0b6;
 }
+
+/* =========================
+   CARD
+========================= */
 
 .card {
     width: min(100%, 850px);
@@ -585,6 +650,10 @@ td a:hover {
     box-shadow:
         0 18px 45px rgba(75, 55, 60, 0.08);
 }
+
+/* =========================
+   BACK DASHBOARD
+========================= */
 
 .back-dashboard {
     display: inline-flex;
@@ -619,6 +688,9 @@ td a:hover {
     color: #44373c;
 }
 
+/* =========================
+   FORM TABLE
+========================= */
 
 form table {
     width: 100%;
@@ -644,7 +716,6 @@ form table td {
     text-align: left;
 }
 
-
 form table tr:last-child td {
     text-align: center !important;
 
@@ -652,6 +723,10 @@ form table tr:last-child td {
 
     border: none !important;
 }
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 800px) {
 
@@ -710,5 +785,494 @@ form table tr:last-child td {
 
     ul li a {
         min-height: 60px;
+    }
+}
+
+
+/* ==================================================
+   TAMBAHAN KHUSUS PRINT STRUK TRANSAKSI
+   CSS SEBELUMNYA TIDAK DIUBAH
+================================================== */
+
+@media print {
+
+    @page {
+        size: A4 landscape;
+        margin: 12mm;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+        color: #333 !important;
+    }
+
+    h1 {
+        margin: 10px 0 25px !important;
+        font-size: 30px !important;
+        color: #4a4044 !important;
+    }
+
+    h1::after {
+        display: none !important;
+    }
+
+    /* TABEL STRUK */
+
+    table {
+        width: 100% !important;
+
+        margin: 15px 0 25px !important;
+
+        border-collapse: collapse !important;
+
+        border-radius: 15px !important;
+
+        overflow: hidden !important;
+
+        box-shadow: none !important;
+
+        background: #ffffff !important;
+    }
+
+    th {
+        padding: 12px !important;
+
+        background: #eab2c3 !important;
+
+        color: #4a3b41 !important;
+
+        border: 1px solid #d8c4ca !important;
+
+        font-size: 11px !important;
+    }
+
+    td {
+        padding: 11px !important;
+
+        background: #ffffff !important;
+
+        color: #4d4146 !important;
+
+        border: 1px solid #ddd0d4 !important;
+
+        font-size: 11px !important;
+    }
+
+    /* SEMBUNYIKAN TOMBOL SAAT PRINT */
+
+    button,
+    .no-print,
+    a[href*="struk"],
+    a[href*="riwayat"],
+    a[href*="dashboard"] {
+        display: none !important;
+    }
+
+    /* SEMBUNYIKAN PARAGRAF KEMBALI */
+
+    body > p {
+        display: none !important;
+    }
+
+    /* CARD MENJADI FULL WIDTH */
+
+    .card,
+    .dashboard-card {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        background: transparent !important;
+
+        border: none !important;
+
+        box-shadow: none !important;
+    }
+}
+
+/* ==================================================
+   STRUK TRANSAKSI
+   TAMPILAN LAYAR
+================================================== */
+
+.struk-container {
+    width: min(100%, 900px);
+    margin: 20px auto;
+    padding: 35px;
+
+    background: rgba(255, 253, 248, 0.85);
+
+    border: 1px solid rgba(205, 185, 190, 0.45);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(80, 60, 70, 0.10);
+}
+
+
+/* HEADER STRUK */
+
+.struk-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.struk-header h2 {
+    margin-bottom: 5px;
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 34px;
+
+    color: #4a4044;
+}
+
+.struk-subtitle {
+    margin: 0;
+
+    color: #9a596e;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* INFORMASI TRANSAKSI */
+
+.struk-info {
+    width: 100%;
+
+    margin-bottom: 25px;
+
+    padding: 20px 25px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid #eadde0;
+
+    border-radius: 18px;
+}
+
+.info-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 7px 0;
+
+    font-size: 12px;
+}
+
+.info-row span {
+    color: #766a6f;
+}
+
+.info-row strong {
+    color: #4a3e43;
+
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+/* TABEL STRUK */
+
+.struk-table {
+    width: 100%;
+
+    margin: 0 0 25px;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    background: #fffdf8;
+
+    border: 1px solid #dfd0d3;
+
+    border-radius: 18px;
+
+    box-shadow: none;
+}
+
+.struk-table th {
+    padding: 13px 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eab2c3,
+            #dc95ad
+        );
+
+    color: #4a3b41;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    border-bottom: 1px solid #d8c4ca;
+}
+
+.struk-table td {
+    padding: 13px 12px;
+
+    background: #fffdf8;
+
+    color: #5c5055;
+
+    border-bottom: 1px solid #eadde0;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+.struk-table tbody tr:last-child td {
+    border-bottom: 1px solid #eadde0;
+}
+
+
+/* TOTAL */
+
+.struk-table tfoot td {
+    padding: 15px 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f4e0e6,
+            #f0d4dc
+        );
+
+    color: #4d4146;
+
+    font-weight: 600;
+
+    border-bottom: none;
+}
+
+
+/* TOMBOL */
+
+.struk-actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.struk-actions button {
+    margin: 0;
+}
+
+.struk-actions a {
+    margin: 0;
+}
+
+
+/* ==================================================
+   PRINT STRUK
+================================================== */
+
+@media print {
+
+    @page {
+        size: A4 landscape;
+        margin: 10mm;
+    }
+
+    html,
+    body {
+        width: 100% !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #ffffff !important;
+    }
+
+
+    /* HILANGKAN SEMUA EFEK LAYAR */
+
+    .struk-container {
+        width: 100% !important;
+
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        background: #ffffff !important;
+
+        border: none !important;
+
+        border-radius: 0 !important;
+
+        box-shadow: none !important;
+    }
+
+
+    /* HEADER */
+
+    .struk-header {
+        margin-bottom: 15px !important;
+
+        text-align: center !important;
+    }
+
+    .struk-header h2 {
+        margin: 0 0 3px !important;
+
+        font-size: 27px !important;
+
+        color: #333 !important;
+    }
+
+    .struk-subtitle {
+        font-size: 10px !important;
+
+        color: #555 !important;
+    }
+
+
+    /* INFO */
+
+    .struk-info {
+        width: 100% !important;
+
+        margin: 0 0 15px !important;
+
+        padding: 10px 15px !important;
+
+        background: #ffffff !important;
+
+        border: 1px solid #cccccc !important;
+
+        border-radius: 8px !important;
+
+        box-shadow: none !important;
+    }
+
+    .info-row {
+        padding: 4px 0 !important;
+
+        font-size: 10px !important;
+    }
+
+    .info-row span,
+    .info-row strong {
+        color: #333 !important;
+    }
+
+
+    /* TABLE */
+
+    .struk-table {
+        width: 100% !important;
+
+        margin: 0 0 15px !important;
+
+        border-collapse: collapse !important;
+
+        border-spacing: 0 !important;
+
+        background: #ffffff !important;
+
+        border: 1px solid #999999 !important;
+
+        border-radius: 0 !important;
+
+        box-shadow: none !important;
+
+        overflow: visible !important;
+    }
+
+    .struk-table th {
+        padding: 8px !important;
+
+        background: #eeeeee !important;
+
+        color: #222222 !important;
+
+        border: 1px solid #999999 !important;
+
+        font-size: 10px !important;
+    }
+
+    .struk-table td {
+        padding: 8px !important;
+
+        background: #ffffff !important;
+
+        color: #333333 !important;
+
+        border: 1px solid #bbbbbb !important;
+
+        font-size: 10px !important;
+    }
+
+    .struk-table tfoot td {
+        padding: 9px !important;
+
+        background: #eeeeee !important;
+
+        color: #222222 !important;
+
+        border: 1px solid #999999 !important;
+
+        font-weight: 700 !important;
+    }
+
+
+    /* SEMBUNYIKAN TOMBOL */
+
+    .no-print {
+        display: none !important;
+    }
+
+    .struk-actions {
+        display: none !important;
+    }
+
+
+    /* PASTIKAN TIDAK ADA ELEMEN LAMA YANG MEMBUAT
+       STRUK MENJADI TERLALU BESAR */
+
+    body > p {
+        display: none !important;
+    }
+
+    body > h1 {
+        display: none !important;
     }
 }
