@@ -610,6 +610,23 @@ td a:hover {
     text-align: center;
 }
 
+
+/* =========================
+   TOMBOL KEMBALI DASHBOARD
+========================= */
+
+.back-dashboard {
+    min-width: 120px !important;
+    width: auto !important;
+    height: 34px !important;
+
+    padding: 7px 14px !important;
+    margin: 0 auto !important;
+
+    font-size: 10px !important;
+    border-radius: 10px !important;
+}
+
 /* =========================
    SECTION TITLE
 ========================= */
